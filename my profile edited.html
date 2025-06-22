@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+    <style>
+        /* Main styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+        }
+        
+        /* Header with your dotted outline name */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #4a6fa5, #3a5a80);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 12px;
+            outline: 3px dotted rgba(255,255,255,0.7);
+            outline-offset: 5px;
+            padding: 5px 0;
+            letter-spacing: 1px;
+        }
+        
+        /* Profile picture with hover effect */
+        .profile-picture {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-picture:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Sections - now with subtle animation */
+        section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Section headings with gradient underline */
+        h2 {
+            color: #4a6fa5;
+            padding-bottom: 8px;
+            position: relative;
+            margin-top: 0;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #4a6fa5, #8da8c8);
+            border-radius: 3px;
+        }
+        
+        /* Improved list styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        li::before {
+            content: "•";
+            color: #4a6fa5;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -3px;
+        }
+        
+        /* Footer styling */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        /* Interactive links */
+        a {
+            color: #4a6fa5;
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px dashed transparent;
+        }
+        
+        a:hover {
+            color: #3a5a80;
+            border-bottom-color: #4a6fa5;
+        }
+        
+        /* Responsive design for mobile */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://asset-2.tstatic.net/toraja/foto/bank/images/anime-naruto-uzumaki-2522024.jpg" alt="Profile Picture" class="profile-picture">
+        <h1> Rui Bagussyah Maulana</h1>
+        <p>Accounting Graduate | Web Design Student</p>
+    </header>
+    
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I recently graduated with an accounting degree and I'm now exploring web design. I'm excited to learn how to create beautiful and functional websites.</p>
+        <p>When I'm not studying, I enjoy basketball.</p>
+    </section>
+    
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li><strong>High School Diploma in Accounting</strong> - SMKN 1 Surabaya, 2025</li>
+            <li><strong>Web Design Fundamentals</strong> - Currently learning</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>Basic Accounting</li>
+            <li>Financial Analysis</li>
+            <li>HTML & CSS</li>
+            <li>Microsoft Office</li>
+            <li>Problem Solving</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Contact</h2>
+        <ul>
+            <li>Email: <a href="ruimaulana2000@gmail.com">ruimaulana2000@gmail.com</a></li>
+            <li>Phone: <a href="0882009546022">0882009546022</a></li>
+            <li>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>&copy; <span id="current-year"></span>  Rui Bagussyah Maulana. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Automatically update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Adding simple interaction
+        document.querySelectorAll('section').forEach(section => {
+            section.addEventListener('click', function() {
+                this.style.backgroundColor = '#f5f7fa';
+                setTimeout(() => {
+                    this.style.backgroundColor = 'white';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
